@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F4703622AD7B82A00BE8AC9 /* PillFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */; };
+		7F4703642AD7CC0300BE8AC9 /* PillInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */; };
+		7F4703682AD8819200BE8AC9 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703672AD8819200BE8AC9 /* NotificationView.swift */; };
+		7F4A43CE2AD51C2F0048A02F /* Pill_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */; };
+		7F4A43D52AD51C2F0048A02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43D42AD51C2F0048A02F /* ContentView.swift */; };
+		7F4A43D72AD51C300048A02F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A43D62AD51C300048A02F /* Assets.xcassets */; };
+		7F4A43DB2AD51C300048A02F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F4A43DA2AD51C300048A02F /* Preview Assets.xcassets */; };
+		7F4A43E52AD51C300048A02F /* Pill_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43E42AD51C300048A02F /* Pill_ReminderTests.swift */; };
+		7F4A43EF2AD51C300048A02F /* Pill_ReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43EE2AD51C300048A02F /* Pill_ReminderUITests.swift */; };
+		7F4A43F12AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43F02AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift */; };
+		7F4A44012AD51C790048A02F /* PillModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */; };
+		7F4A44032AD51D060048A02F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44022AD51D060048A02F /* DataController.swift */; };
+		7F4A44052AD51E7B0048A02F /* EditPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44042AD51E7B0048A02F /* EditPillView.swift */; };
+		7F4A440D2AD5CE900048A02F /* AddPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A440C2AD5CE900048A02F /* AddPillView.swift */; };
+		7F4A440F2AD5D5D30048A02F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A440E2AD5D5D30048A02F /* CalendarView.swift */; };
+		7F4A44132AD5EFA90048A02F /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44122AD5EFA90048A02F /* DateViewModel.swift */; };
+		7F4A44162AD616110048A02F /* TimeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44152AD616110048A02F /* TimeCategory.swift */; };
+		7F4A44182AD6184E0048A02F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44172AD6184E0048A02F /* Tab.swift */; };
+		7F4A441A2AD618B50048A02F /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44192AD618B50048A02F /* TabView.swift */; };
+		7F4A441C2AD629220048A02F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A441B2AD629220048A02F /* MainView.swift */; };
+		7FBE25F12AD7ACEC00E02B3C /* DrugData.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7FBE25F02AD7ACEC00E02B3C /* DrugData.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F4A43E12AD51C300048A02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F4A43C22AD51C2F0048A02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F4A43C92AD51C2F0048A02F;
+			remoteInfo = "Pill Reminder";
+		};
+		7F4A43EB2AD51C300048A02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F4A43C22AD51C2F0048A02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F4A43C92AD51C2F0048A02F;
+			remoteInfo = "Pill Reminder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillFilterViewModel.swift; sourceTree = "<group>"; };
+		7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillInfoView.swift; sourceTree = "<group>"; };
+		7F4703672AD8819200BE8AC9 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		7F4A43CA2AD51C2F0048A02F /* Pill Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pill Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderApp.swift; sourceTree = "<group>"; };
+		7F4A43D42AD51C2F0048A02F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F4A43D62AD51C300048A02F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F4A43D82AD51C300048A02F /* Pill_Reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pill_Reminder.entitlements; sourceTree = "<group>"; };
+		7F4A43DA2AD51C300048A02F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F4A43E02AD51C300048A02F /* Pill ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pill ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4A43E42AD51C300048A02F /* Pill_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderTests.swift; sourceTree = "<group>"; };
+		7F4A43EA2AD51C300048A02F /* Pill ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pill ReminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4A43EE2AD51C300048A02F /* Pill_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderUITests.swift; sourceTree = "<group>"; };
+		7F4A43F02AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PillModel.xcdatamodel; sourceTree = "<group>"; };
+		7F4A44022AD51D060048A02F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		7F4A44042AD51E7B0048A02F /* EditPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPillView.swift; sourceTree = "<group>"; };
+		7F4A440C2AD5CE900048A02F /* AddPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillView.swift; sourceTree = "<group>"; };
+		7F4A440E2AD5D5D30048A02F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		7F4A44122AD5EFA90048A02F /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		7F4A44152AD616110048A02F /* TimeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategory.swift; sourceTree = "<group>"; };
+		7F4A44172AD6184E0048A02F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		7F4A44192AD618B50048A02F /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		7F4A441B2AD629220048A02F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7FBE25F02AD7ACEC00E02B3C /* DrugData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DrugData.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F4A43C72AD51C2F0048A02F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43DD2AD51C300048A02F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43E72AD51C300048A02F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F4A43C12AD51C2F0048A02F = {
+			isa = PBXGroup;
+			children = (
+				7F4A43CC2AD51C2F0048A02F /* Pill Reminder */,
+				7F4A43E32AD51C300048A02F /* Pill ReminderTests */,
+				7F4A43ED2AD51C300048A02F /* Pill ReminderUITests */,
+				7F4A43CB2AD51C2F0048A02F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F4A43CB2AD51C2F0048A02F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43CA2AD51C2F0048A02F /* Pill Reminder.app */,
+				7F4A43E02AD51C300048A02F /* Pill ReminderTests.xctest */,
+				7F4A43EA2AD51C300048A02F /* Pill ReminderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F4A43CC2AD51C2F0048A02F /* Pill Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */,
+				7F4A44142AD5EFAF0048A02F /* ViewModel */,
+				7F4A43FE2AD51C610048A02F /* Views */,
+				7F4A43FD2AD51C570048A02F /* DataModel */,
+				7FBE25F22AD7AE2F00E02B3C /* Resources */,
+				7F4A43D82AD51C300048A02F /* Pill_Reminder.entitlements */,
+				7F4A43D92AD51C300048A02F /* Preview Content */,
+			);
+			path = "Pill Reminder";
+			sourceTree = "<group>";
+		};
+		7F4A43D92AD51C300048A02F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43DA2AD51C300048A02F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F4A43E32AD51C300048A02F /* Pill ReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43E42AD51C300048A02F /* Pill_ReminderTests.swift */,
+			);
+			path = "Pill ReminderTests";
+			sourceTree = "<group>";
+		};
+		7F4A43ED2AD51C300048A02F /* Pill ReminderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43EE2AD51C300048A02F /* Pill_ReminderUITests.swift */,
+				7F4A43F02AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift */,
+			);
+			path = "Pill ReminderUITests";
+			sourceTree = "<group>";
+		};
+		7F4A43FD2AD51C570048A02F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */,
+				7F4A44152AD616110048A02F /* TimeCategory.swift */,
+				7F4A44172AD6184E0048A02F /* Tab.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		7F4A43FE2AD51C610048A02F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43D42AD51C2F0048A02F /* ContentView.swift */,
+				7F4A440E2AD5D5D30048A02F /* CalendarView.swift */,
+				7F4A44042AD51E7B0048A02F /* EditPillView.swift */,
+				7F4A440C2AD5CE900048A02F /* AddPillView.swift */,
+				7F4703672AD8819200BE8AC9 /* NotificationView.swift */,
+				7F4A44192AD618B50048A02F /* TabView.swift */,
+				7F4A441B2AD629220048A02F /* MainView.swift */,
+				7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F4A44142AD5EFAF0048A02F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A44122AD5EFA90048A02F /* DateViewModel.swift */,
+				7F4A44022AD51D060048A02F /* DataController.swift */,
+				7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7FBE25F22AD7AE2F00E02B3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43D62AD51C300048A02F /* Assets.xcassets */,
+				7FBE25F02AD7ACEC00E02B3C /* DrugData.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F4A43C92AD51C2F0048A02F /* Pill Reminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F4A43F42AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill Reminder" */;
+			buildPhases = (
+				7F4A43C62AD51C2F0048A02F /* Sources */,
+				7F4A43C72AD51C2F0048A02F /* Frameworks */,
+				7F4A43C82AD51C2F0048A02F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pill Reminder";
+			productName = "Pill Reminder";
+			productReference = 7F4A43CA2AD51C2F0048A02F /* Pill Reminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7F4A43DF2AD51C300048A02F /* Pill ReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F4A43F72AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill ReminderTests" */;
+			buildPhases = (
+				7F4A43DC2AD51C300048A02F /* Sources */,
+				7F4A43DD2AD51C300048A02F /* Frameworks */,
+				7F4A43DE2AD51C300048A02F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F4A43E22AD51C300048A02F /* PBXTargetDependency */,
+			);
+			name = "Pill ReminderTests";
+			productName = "Pill ReminderTests";
+			productReference = 7F4A43E02AD51C300048A02F /* Pill ReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F4A43E92AD51C300048A02F /* Pill ReminderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F4A43FA2AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill ReminderUITests" */;
+			buildPhases = (
+				7F4A43E62AD51C300048A02F /* Sources */,
+				7F4A43E72AD51C300048A02F /* Frameworks */,
+				7F4A43E82AD51C300048A02F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F4A43EC2AD51C300048A02F /* PBXTargetDependency */,
+			);
+			name = "Pill ReminderUITests";
+			productName = "Pill ReminderUITests";
+			productReference = 7F4A43EA2AD51C300048A02F /* Pill ReminderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F4A43C22AD51C2F0048A02F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					7F4A43C92AD51C2F0048A02F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					7F4A43DF2AD51C300048A02F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 7F4A43C92AD51C2F0048A02F;
+					};
+					7F4A43E92AD51C300048A02F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 7F4A43C92AD51C2F0048A02F;
+					};
+				};
+			};
+			buildConfigurationList = 7F4A43C52AD51C2F0048A02F /* Build configuration list for PBXProject "Pill Reminder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F4A43C12AD51C2F0048A02F;
+			productRefGroup = 7F4A43CB2AD51C2F0048A02F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F4A43C92AD51C2F0048A02F /* Pill Reminder */,
+				7F4A43DF2AD51C300048A02F /* Pill ReminderTests */,
+				7F4A43E92AD51C300048A02F /* Pill ReminderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F4A43C82AD51C2F0048A02F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4A43DB2AD51C300048A02F /* Preview Assets.xcassets in Resources */,
+				7F4A43D72AD51C300048A02F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43DE2AD51C300048A02F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43E82AD51C300048A02F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FBE25F12AD7ACEC00E02B3C /* DrugData.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F4A43C62AD51C2F0048A02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4A43CE2AD51C2F0048A02F /* Pill_ReminderApp.swift in Sources */,
+				7F4A441C2AD629220048A02F /* MainView.swift in Sources */,
+				7F4703622AD7B82A00BE8AC9 /* PillFilterViewModel.swift in Sources */,
+				7F4703682AD8819200BE8AC9 /* NotificationView.swift in Sources */,
+				7F4A440D2AD5CE900048A02F /* AddPillView.swift in Sources */,
+				7F4A44162AD616110048A02F /* TimeCategory.swift in Sources */,
+				7F4A44032AD51D060048A02F /* DataController.swift in Sources */,
+				7F4A44182AD6184E0048A02F /* Tab.swift in Sources */,
+				7F4703642AD7CC0300BE8AC9 /* PillInfoView.swift in Sources */,
+				7F4A44012AD51C790048A02F /* PillModel.xcdatamodeld in Sources */,
+				7F4A44132AD5EFA90048A02F /* DateViewModel.swift in Sources */,
+				7F4A440F2AD5D5D30048A02F /* CalendarView.swift in Sources */,
+				7F4A44052AD51E7B0048A02F /* EditPillView.swift in Sources */,
+				7F4A441A2AD618B50048A02F /* TabView.swift in Sources */,
+				7F4A43D52AD51C2F0048A02F /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43DC2AD51C300048A02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4A43E52AD51C300048A02F /* Pill_ReminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F4A43E62AD51C300048A02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4A43EF2AD51C300048A02F /* Pill_ReminderUITests.swift in Sources */,
+				7F4A43F12AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F4A43E22AD51C300048A02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F4A43C92AD51C2F0048A02F /* Pill Reminder */;
+			targetProxy = 7F4A43E12AD51C300048A02F /* PBXContainerItemProxy */;
+		};
+		7F4A43EC2AD51C300048A02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F4A43C92AD51C2F0048A02F /* Pill Reminder */;
+			targetProxy = 7F4A43EB2AD51C300048A02F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7F4A43F22AD51C300048A02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F4A43F32AD51C300048A02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7F4A43F52AD51C300048A02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pill Reminder/Pill_Reminder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pill Reminder/Preview Content\"";
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-Reminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F4A43F62AD51C300048A02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Pill Reminder/Pill_Reminder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Pill Reminder/Preview Content\"";
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-Reminder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7F4A43F82AD51C300048A02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-ReminderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pill Reminder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pill Reminder";
+			};
+			name = Debug;
+		};
+		7F4A43F92AD51C300048A02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-ReminderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pill Reminder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pill Reminder";
+			};
+			name = Release;
+		};
+		7F4A43FB2AD51C300048A02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-ReminderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pill Reminder";
+			};
+			name = Debug;
+		};
+		7F4A43FC2AD51C300048A02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N2RFN2YHZ5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "soyeon.Pill-ReminderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Pill Reminder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F4A43C52AD51C2F0048A02F /* Build configuration list for PBXProject "Pill Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F4A43F22AD51C300048A02F /* Debug */,
+				7F4A43F32AD51C300048A02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F4A43F42AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F4A43F52AD51C300048A02F /* Debug */,
+				7F4A43F62AD51C300048A02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F4A43F72AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill ReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F4A43F82AD51C300048A02F /* Debug */,
+				7F4A43F92AD51C300048A02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F4A43FA2AD51C300048A02F /* Build configuration list for PBXNativeTarget "Pill ReminderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F4A43FB2AD51C300048A02F /* Debug */,
+				7F4A43FC2AD51C300048A02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */,
+			);
+			currentVersion = 7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */;
+			path = PillModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7F4A43C22AD51C2F0048A02F /* Project object */;
+}
