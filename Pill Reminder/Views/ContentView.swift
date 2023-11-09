@@ -44,7 +44,7 @@ struct ContentView: View {
                     
                     HStack {
                         
-                        Text("Good \(dateViewModel.getTimeCategory(for: currentDay)),")
+                        Text("Good \(dateViewModel.getGreetingHeadline(for: currentDay)),")
                             .bold()
                             .font(.system(size: 30))
                             .foregroundColor(.white)

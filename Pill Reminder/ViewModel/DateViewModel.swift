@@ -9,58 +9,58 @@ import Foundation
 
 class DateViewModel: ObservableObject {
     
-    // Intialize the DataViewModel and fetch the current week
+    // MARK: Properties
+    
+    @Published var currentWeek: [Date] = []
+    @Published var currentDay: Date = Date()
+    
+    // MARK: Constructor
+    
     init() {
         fetchCurrentWeek()
     }
     
-    // Current Week Days
-    @Published var currentWeek: [Date] = []
-    @Published var currentDay: Date = Date()
+    // MARK: Functions
     
-    // Fetch the dates for the current week
     func fetchCurrentWeek() {
         let today = Date()
         let calendar = Calendar.current
         
-        // Calculate the date interval for the current week
-        let week = calendar.dateInterval(of: .weekOfMonth, for: today)
-        
-        guard let firstWeekDay = week?.start else {
+        guard let week = calendar.dateInterval(of: .weekOfMonth, for: today)?.start else {
             return
         }
-        // Populate currentWeek with dates for the entire week
-        (1...7).forEach { day in
-            if let weekday = calendar.date(byAdding: .day, value: day, to: firstWeekDay) {
-                currentWeek.append(weekday)
-            }
-        }
+        currentWeek = (0..<7).map { calendar.date(byAdding: .day, value: $0, to: week)! }
     }
     
-    // Format a date to a string using the provided format
-    func extractDate(date: Date, format: String) -> String {
+    func formatDate(date: Date, format: String) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = format
         return formatter.string(from: date)
     }
     
-    // Check if a given date is today
-    func isToday(date: Date) -> Bool {
-        let calendar = Calendar.current
-        return calendar.isDate(currentDay, inSameDayAs: date)
+    func getDateMonth(date: Date) -> String {
+        return formatDate(date: date, format: "MMM")
     }
     
-    // Determine the time category (Morning, Afternoon, Evening) for a given date
-    func getTimeCategory(for date: Date) -> String {
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
+    func getDate(date: Date) -> String {
+        return formatDate(date: date, format: "dd")
+    }
+    
+    func getHourMinutes(date: Date) -> String {
+        return formatDate(date: date, format: "h:mm a")
+    }
+    
+    func isToday(date: Date) -> Bool {
+        return Calendar.current.isDate(currentDay, inSameDayAs: date)
+    }
+    
+    func getGreetingHeadline(for date: Date) -> String {
+        let hour = Calendar.current.component(.hour, from: date)
         
-        if (6...11).contains(hour) {
-            return "Morning"
-        } else if (12...17).contains(hour) {
-            return "Afternoon"
-        } else {
-            return "Evening"
+        switch hour {
+        case 6...11: return "Morning"
+        case 12...17: return "Afternoon"
+        default: return "Evening"
         }
     }
 }
