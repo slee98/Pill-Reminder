@@ -20,8 +20,8 @@ struct MainView: View {
             switch selectedTab {
             case .house:
                 ContentView()
-            case .pills:
-                AddPillView()
+            //case .pills:
+                //AddPillView()
             case .calendar:
                 CalendarView()
             }

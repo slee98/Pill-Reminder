@@ -9,6 +9,6 @@ import Foundation
 
 enum Tab: String, CaseIterable {
     case house = "house"
-    case pills = "pill"
+   // case pills = "pill"
     case calendar = "calendar"
 }

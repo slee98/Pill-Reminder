@@ -47,8 +47,8 @@ struct PillInfoView: View {
                                 Text("Dosage: \(Int(pill.dosage))")
                                     .font(.system(size: 12))
                                 
-                                Text("Time: \(dateViewModel.extractDate(date: pill.date ?? Date(), format: "HH:mm"))")
-                                    .font(.system(size: 12))
+//                                Text("Time: \(dateViewModel.extractDate(date: pill.date ?? Date(), format: "HH:mm"))")
+//                                    .font(.system(size: 12))
                                 
                                 Text("\(formatDates(pill.frequency!))")
                                     .font(.system(size: 12))
@@ -58,7 +58,7 @@ struct PillInfoView: View {
                         
                     }
                     .sheet(item: $selectedPill) { selectedPill in
-                        EditPillView(savedPill: selectedPill)
+                       // EditPillView(savedPill: selectedPill)
                         
                     }
                     
