@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GreetingHeadLineView: View {
     
-    @ObservedObject var dateViewModel = DateViewModel()
+    let dateViewModel = DateHelper()
 
     var body: some View {
         VStack(alignment: .leading) {

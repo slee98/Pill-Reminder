@@ -10,14 +10,13 @@ import SwiftUI
 struct TabView: View {
     
     @Binding var selectedTab: Tab
-    @State var pill: Pill
     
     var body: some View {
         HStack {
             ForEach(Tab.allCases, id: \.rawValue) { tab in
                 
                 Spacer()
-                Image(systemName: tab.rawValue)
+                tab.image
                     .scaleEffect(tab == selectedTab ? 1.25 : 1.0)
                     .onTapGesture {
                         withAnimation(.easeIn(duration: 0.1)) {
@@ -35,7 +34,7 @@ struct TabView: View {
 }
 
 #Preview {
-    TabView(selectedTab: .constant(.house), pill: Pill())
+    TabView(selectedTab: .constant(.house))
 }
 
 

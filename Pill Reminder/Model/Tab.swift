@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Tab: String, CaseIterable {
-    case house = "house"
-   // case pills = "pill"
-    case calendar = "calendar"
+    case house
+    case pill
+    case calendar
+    
+    var image: Image {
+        Image(systemName: rawValue)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  PillInfoView.swift
+//  PillInfoCardListView.swift
 //  Pill Reminder
 //
 //  Created by Soyeon Lee on 10/11/23.
@@ -7,17 +7,14 @@
 
 import SwiftUI
 
-struct PillInfoView: View {
+struct PillInfoCardListView: View {
     
     @State private var selectedPill: Pill?
     let gridColumns = [GridItem(.fixed(100),spacing: 80),GridItem(.fixed(100),spacing: 80)]
     @State private var isSheetPresented = false // Create a state variable to control the sheet presentation
     @FetchRequest(entity: Pill.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Pill.date, ascending: false)]) var pills: FetchedResults<Pill>
-    @StateObject var pillViewModel = PillFilterViewModel() // Create an instance of the view model
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @StateObject var dateViewModel: DateViewModel = DateViewModel()
+                  sortDescriptors: [NSSortDescriptor(keyPath: \Pill.startDate, ascending: false)]) var pills: FetchedResults<Pill>
+    let dateViewModel: DateHelper = DateHelper()
     
     
     var body: some View {
@@ -44,28 +41,26 @@ struct PillInfoView: View {
                                 Text(pill.name ?? "<no name>")
                                     .bold()
                                     .font(.system(size: 14))
-                                Text("Dosage: \(Int(pill.dosage))")
+                                Text("Dosage: \(pill.dosageUnitString)")
                                     .font(.system(size: 12))
                                 
-//                                Text("Time: \(dateViewModel.extractDate(date: pill.date ?? Date(), format: "HH:mm"))")
-//                                    .font(.system(size: 12))
-                                
-                                Text("\(formatDates(pill.frequency!))")
+                                Text("Time: \(DateHelper().getTime(fromWhenToTakeTimestamp: pill.whenToTakeTimestamp))")
                                     .font(.system(size: 12))
+                                
+                                //Text(pill.whenToTakeFrequencies)
+                                    //.font(.system(size: 12))
                                 
                             }
                         }
-                        
                     }
-                    .sheet(item: $selectedPill) { selectedPill in
-                       // EditPillView(savedPill: selectedPill)
-                        
-                    }
-                    
                 }
                 .foregroundColor(.black)
                 .padding(.top, 20)
-                
+                .sheet(item: $selectedPill) { selectedPill in
+                    PillDetailView(originalPill: selectedPill) {
+                        self.selectedPill = nil
+                    }
+                }
             }
         }
         
@@ -79,15 +74,10 @@ struct PillInfoView: View {
         let formattedDates = dates.map { dateFormatter.string(from: $0) }
         return formattedDates.joined(separator: ", ")
     }
-    private func deletePill(pill: Pill) {
-        withAnimation {
-            viewContext.delete(pill)
-        }
-    }
 }
 
 
 
 #Preview {
-    PillInfoView()
+    PillInfoCardListView()
 }

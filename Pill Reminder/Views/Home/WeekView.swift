@@ -9,10 +9,10 @@ import SwiftUI
 
 struct WeekView: View {
     
-    @ObservedObject var dateViewModel = DateViewModel()
+    let dateViewModel = DateHelper()
     
     var body: some View {
-        ScrollView (.horizontal, showsIndicators: false) {
+        ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 10) {
                 ForEach(dateViewModel.currentWeek, id: \.self) { date in
                     ZStack {
@@ -21,17 +21,12 @@ struct WeekView: View {
                                    ? Color.blue.opacity(0.5) : Color.white)
                             .frame(width: 42, height: 42)
                         VStack {
-                            Text(dateViewModel.changeToDay(date: date))
+                            Text(dateViewModel.getDayOfWeek(for: date))
                                 .font(.system(size: 12))
                                 .bold()
                             
-                            Text(dateViewModel.changeToDate(date: date))
+                            Text(dateViewModel.getDayOfMonth(for: date))
                                 .font(.system(size: 12))
-                        }
-                        .onTapGesture {
-                            withAnimation {
-                                dateViewModel.currentDay = date
-                            }
                         }
                     }
                 }
@@ -40,7 +35,6 @@ struct WeekView: View {
         }
     }
 }
-
 #Preview {
     WeekView()
 }

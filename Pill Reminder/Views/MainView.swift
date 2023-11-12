@@ -11,26 +11,31 @@ import SwiftUI
 struct MainView: View {
     
     @State private var selectedTab: Tab = .house
-    @Environment(\.managedObjectContext) private var viewContext
     
     
     var body: some View {
         // Add the TabView at the bottom
         ZStack {
-            switch selectedTab {
-            case .house:
-                ContentView()
-            //case .pills:
-                //AddPillView()
-            case .calendar:
-                CalendarView()
+            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)),Color(#colorLiteral(red: 0.2666666667, green: 0.6705882353, blue: 1, alpha: 0.7517111971)), Color(#colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1))]),
+                           startPoint: .top,
+                           endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+            VStack {
+                switch selectedTab {
+                    case .house:
+                        ContentView()
+                    case .pill:
+                    PillDetailView {
+                        selectedTab = .house
+                    }
+                    case .calendar:
+                        CalendarView()
+                }
+                
+                Spacer()
+                
+                TabView(selectedTab: $selectedTab)
             }
-            
-            Spacer()
-            
-            TabView(selectedTab: $selectedTab, pill: Pill())
-                .padding(.top, 650)
-            
         }
     }
 }

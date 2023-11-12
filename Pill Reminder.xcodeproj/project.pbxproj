@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		7F221A1B2AFD9C590029CD3B /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F221A1A2AFD9C590029CD3B /* WeekView.swift */; };
 		7F221A1D2AFDA0230029CD3B /* GreetingHeadLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F221A1C2AFDA0230029CD3B /* GreetingHeadLineView.swift */; };
-		7F4703622AD7B82A00BE8AC9 /* PillFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */; };
-		7F4703642AD7CC0300BE8AC9 /* PillInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */; };
+		7F221A232B0043F70029CD3B /* Weekday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F221A222B0043F70029CD3B /* Weekday.swift */; };
+		7F221A2A2B0098FF0029CD3B /* Pill+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F221A292B0098FF0029CD3B /* Pill+.swift */; };
+		7F4703642AD7CC0300BE8AC9 /* PillInfoCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703632AD7CC0200BE8AC9 /* PillInfoCardListView.swift */; };
 		7F4703682AD8819200BE8AC9 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4703672AD8819200BE8AC9 /* NotificationView.swift */; };
 		7F4A43CE2AD51C2F0048A02F /* Pill_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */; };
 		7F4A43D52AD51C2F0048A02F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43D42AD51C2F0048A02F /* ContentView.swift */; };
@@ -19,13 +20,11 @@
 		7F4A43E52AD51C300048A02F /* Pill_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43E42AD51C300048A02F /* Pill_ReminderTests.swift */; };
 		7F4A43EF2AD51C300048A02F /* Pill_ReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43EE2AD51C300048A02F /* Pill_ReminderUITests.swift */; };
 		7F4A43F12AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43F02AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift */; };
-		7F4A44012AD51C790048A02F /* PillModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */; };
-		7F4A44032AD51D060048A02F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44022AD51D060048A02F /* DataController.swift */; };
-		7F4A44052AD51E7B0048A02F /* EditPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44042AD51E7B0048A02F /* EditPillView.swift */; };
-		7F4A440D2AD5CE900048A02F /* AddPillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A440C2AD5CE900048A02F /* AddPillView.swift */; };
+		7F4A44012AD51C790048A02F /* Pill.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A43FF2AD51C790048A02F /* Pill.xcdatamodeld */; };
+		7F4A44032AD51D060048A02F /* PillsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44022AD51D060048A02F /* PillsDataManager.swift */; };
+		7F4A440D2AD5CE900048A02F /* PillDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A440C2AD5CE900048A02F /* PillDetailView.swift */; };
 		7F4A440F2AD5D5D30048A02F /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A440E2AD5D5D30048A02F /* CalendarView.swift */; };
-		7F4A44132AD5EFA90048A02F /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44122AD5EFA90048A02F /* DateViewModel.swift */; };
-		7F4A44162AD616110048A02F /* TimeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44152AD616110048A02F /* TimeCategory.swift */; };
+		7F4A44132AD5EFA90048A02F /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44122AD5EFA90048A02F /* DateHelper.swift */; };
 		7F4A44182AD6184E0048A02F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44172AD6184E0048A02F /* Tab.swift */; };
 		7F4A441A2AD618B50048A02F /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A44192AD618B50048A02F /* TabView.swift */; };
 		7F4A441C2AD629220048A02F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4A441B2AD629220048A02F /* MainView.swift */; };
@@ -52,8 +51,9 @@
 /* Begin PBXFileReference section */
 		7F221A1A2AFD9C590029CD3B /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		7F221A1C2AFDA0230029CD3B /* GreetingHeadLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingHeadLineView.swift; sourceTree = "<group>"; };
-		7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillFilterViewModel.swift; sourceTree = "<group>"; };
-		7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillInfoView.swift; sourceTree = "<group>"; };
+		7F221A222B0043F70029CD3B /* Weekday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekday.swift; sourceTree = "<group>"; };
+		7F221A292B0098FF0029CD3B /* Pill+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pill+.swift"; sourceTree = "<group>"; };
+		7F4703632AD7CC0200BE8AC9 /* PillInfoCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillInfoCardListView.swift; sourceTree = "<group>"; };
 		7F4703672AD8819200BE8AC9 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		7F4A43CA2AD51C2F0048A02F /* Pill Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pill Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderApp.swift; sourceTree = "<group>"; };
@@ -67,12 +67,10 @@
 		7F4A43EE2AD51C300048A02F /* Pill_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderUITests.swift; sourceTree = "<group>"; };
 		7F4A43F02AD51C300048A02F /* Pill_ReminderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pill_ReminderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PillModel.xcdatamodel; sourceTree = "<group>"; };
-		7F4A44022AD51D060048A02F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		7F4A44042AD51E7B0048A02F /* EditPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPillView.swift; sourceTree = "<group>"; };
-		7F4A440C2AD5CE900048A02F /* AddPillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPillView.swift; sourceTree = "<group>"; };
+		7F4A44022AD51D060048A02F /* PillsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillsDataManager.swift; sourceTree = "<group>"; };
+		7F4A440C2AD5CE900048A02F /* PillDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillDetailView.swift; sourceTree = "<group>"; };
 		7F4A440E2AD5D5D30048A02F /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		7F4A44122AD5EFA90048A02F /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
-		7F4A44152AD616110048A02F /* TimeCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCategory.swift; sourceTree = "<group>"; };
+		7F4A44122AD5EFA90048A02F /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		7F4A44172AD6184E0048A02F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		7F4A44192AD618B50048A02F /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		7F4A441B2AD629220048A02F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -104,6 +102,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F221A202B003AC20029CD3B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A43D42AD51C2F0048A02F /* ContentView.swift */,
+				7F221A1C2AFDA0230029CD3B /* GreetingHeadLineView.swift */,
+				7F221A1A2AFD9C590029CD3B /* WeekView.swift */,
+				7F4703632AD7CC0200BE8AC9 /* PillInfoCardListView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7F221A212B0043BF0029CD3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F4A44172AD6184E0048A02F /* Tab.swift */,
+				7F4A43FD2AD51C570048A02F /* ManagedModel */,
+				7F221A222B0043F70029CD3B /* Weekday.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F221A282B0098DD0029CD3B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7F221A292B0098FF0029CD3B /* Pill+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7F4A43C12AD51C2F0048A02F = {
 			isa = PBXGroup;
 			children = (
@@ -128,9 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				7F4A43CD2AD51C2F0048A02F /* Pill_ReminderApp.swift */,
+				7F221A212B0043BF0029CD3B /* Model */,
 				7F4A44142AD5EFAF0048A02F /* ViewModel */,
 				7F4A43FE2AD51C610048A02F /* Views */,
-				7F4A43FD2AD51C570048A02F /* DataModel */,
 				7FBE25F22AD7AE2F00E02B3C /* Resources */,
 				7F4A43D82AD51C300048A02F /* Pill_Reminder.entitlements */,
 				7F4A43D92AD51C300048A02F /* Preview Content */,
@@ -163,29 +190,24 @@
 			path = "Pill ReminderUITests";
 			sourceTree = "<group>";
 		};
-		7F4A43FD2AD51C570048A02F /* DataModel */ = {
+		7F4A43FD2AD51C570048A02F /* ManagedModel */ = {
 			isa = PBXGroup;
 			children = (
-				7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */,
-				7F4A44152AD616110048A02F /* TimeCategory.swift */,
-				7F4A44172AD6184E0048A02F /* Tab.swift */,
+				7F221A282B0098DD0029CD3B /* Extension */,
+				7F4A43FF2AD51C790048A02F /* Pill.xcdatamodeld */,
 			);
-			path = DataModel;
+			path = ManagedModel;
 			sourceTree = "<group>";
 		};
 		7F4A43FE2AD51C610048A02F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7F4A43D42AD51C2F0048A02F /* ContentView.swift */,
-				7F221A1C2AFDA0230029CD3B /* GreetingHeadLineView.swift */,
+				7F4A441B2AD629220048A02F /* MainView.swift */,
+				7F221A202B003AC20029CD3B /* Home */,
 				7F4A440E2AD5D5D30048A02F /* CalendarView.swift */,
-				7F4A44042AD51E7B0048A02F /* EditPillView.swift */,
-				7F4A440C2AD5CE900048A02F /* AddPillView.swift */,
+				7F4A440C2AD5CE900048A02F /* PillDetailView.swift */,
 				7F4703672AD8819200BE8AC9 /* NotificationView.swift */,
 				7F4A44192AD618B50048A02F /* TabView.swift */,
-				7F4A441B2AD629220048A02F /* MainView.swift */,
-				7F4703632AD7CC0200BE8AC9 /* PillInfoView.swift */,
-				7F221A1A2AFD9C590029CD3B /* WeekView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,9 +215,8 @@
 		7F4A44142AD5EFAF0048A02F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7F4A44122AD5EFA90048A02F /* DateViewModel.swift */,
-				7F4A44022AD51D060048A02F /* DataController.swift */,
-				7F4703612AD7B82A00BE8AC9 /* PillFilterViewModel.swift */,
+				7F4A44122AD5EFA90048A02F /* DateHelper.swift */,
+				7F4A44022AD51D060048A02F /* PillsDataManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -342,19 +363,18 @@
 			files = (
 				7F221A1B2AFD9C590029CD3B /* WeekView.swift in Sources */,
 				7F4A43CE2AD51C2F0048A02F /* Pill_ReminderApp.swift in Sources */,
+				7F221A2A2B0098FF0029CD3B /* Pill+.swift in Sources */,
+				7F221A232B0043F70029CD3B /* Weekday.swift in Sources */,
 				7F4A441C2AD629220048A02F /* MainView.swift in Sources */,
-				7F4703622AD7B82A00BE8AC9 /* PillFilterViewModel.swift in Sources */,
 				7F4703682AD8819200BE8AC9 /* NotificationView.swift in Sources */,
-				7F4A440D2AD5CE900048A02F /* AddPillView.swift in Sources */,
-				7F4A44162AD616110048A02F /* TimeCategory.swift in Sources */,
+				7F4A440D2AD5CE900048A02F /* PillDetailView.swift in Sources */,
 				7F221A1D2AFDA0230029CD3B /* GreetingHeadLineView.swift in Sources */,
-				7F4A44032AD51D060048A02F /* DataController.swift in Sources */,
+				7F4A44032AD51D060048A02F /* PillsDataManager.swift in Sources */,
 				7F4A44182AD6184E0048A02F /* Tab.swift in Sources */,
-				7F4703642AD7CC0300BE8AC9 /* PillInfoView.swift in Sources */,
-				7F4A44012AD51C790048A02F /* PillModel.xcdatamodeld in Sources */,
-				7F4A44132AD5EFA90048A02F /* DateViewModel.swift in Sources */,
+				7F4703642AD7CC0300BE8AC9 /* PillInfoCardListView.swift in Sources */,
+				7F4A44012AD51C790048A02F /* Pill.xcdatamodeld in Sources */,
+				7F4A44132AD5EFA90048A02F /* DateHelper.swift in Sources */,
 				7F4A440F2AD5D5D30048A02F /* CalendarView.swift in Sources */,
-				7F4A44052AD51E7B0048A02F /* EditPillView.swift in Sources */,
 				7F4A441A2AD618B50048A02F /* TabView.swift in Sources */,
 				7F4A43D52AD51C2F0048A02F /* ContentView.swift in Sources */,
 			);
@@ -715,13 +735,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7F4A43FF2AD51C790048A02F /* PillModel.xcdatamodeld */ = {
+		7F4A43FF2AD51C790048A02F /* Pill.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */,
 			);
 			currentVersion = 7F4A44002AD51C790048A02F /* PillModel.xcdatamodel */;
-			path = PillModel.xcdatamodeld;
+			path = Pill.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -11,7 +11,7 @@ import SwiftUI
 struct Pill_ReminderApp: App {
     
     //Create a DataController instance to manage Core Data
-    @StateObject private var dataController = DataController()
+    @StateObject private var dataController = PillsDataManager.shared
     
     var body: some Scene {
         WindowGroup {

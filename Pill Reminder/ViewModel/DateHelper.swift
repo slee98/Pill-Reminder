@@ -14,10 +14,10 @@ class DateHelper {
     
     // Intialize the DataViewModel and fetch the current week
     init() {
-        getDayOfWeek()
+        populateCurrentWeek()
     }
-        
-    func getDayOfWeek() {
+    
+    func populateCurrentWeek() {
         let today = Date()
         
         guard let weekInterval = Calendar.current.dateInterval(of: .weekOfMonth, for: today) else {
@@ -25,25 +25,37 @@ class DateHelper {
         }
         currentWeek = (0..<7).compactMap { Calendar.current.date(byAdding: .day, value: $0, to: weekInterval.start) }
     }
-      
     
-    func getMonth() -> String {
+    func getDayOfWeek(for date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM"
-        return formatter.string(from: currentDay)
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: date)
     }
     
-    func getDate() -> String {
+    func getDayOfMonth(for date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"
-        return formatter.string(from: currentDay)
+        return formatter.string(from: date)
     }
     
     // Format a date to a time string using the provided format
-    func getTime() -> String {
+    func getTime(for date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
-        return formatter.string(from: currentDay)
+        return formatter.string(from: date)
+    }
+    
+    func getTime(fromWhenToTakeTimestamp whenToTakeTimestamp: TimeInterval) -> String {
+        let whenToTakeTime = beginningOfDay().addingTimeInterval(whenToTakeTimestamp)
+        return getTime(for: whenToTakeTime)
+    }
+    
+    func getWhenToTakeDate(from timeInterval: TimeInterval) -> Date {
+        return beginningOfDay().addingTimeInterval(timeInterval)
+    }
+    
+    func getWhenToTakeTimeInverval(from date: Date = Date()) -> TimeInterval {
+        return date.timeIntervalSince(beginningOfDay())
     }
     
     // Determine the time category (Morning, Afternoon, Evening) for a given date
@@ -57,5 +69,15 @@ class DateHelper {
         } else {
             return "Evening"
         }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func beginningOfDay() -> Date {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+        let beginningOfDay = calendar.date(from: components)!
+        
+        return beginningOfDay
     }
 }
