@@ -124,6 +124,7 @@ struct PillDetailView: View {
                 }
             Section {
                 Button("Submit") {
+                    NotificationManager.shared.requestAuthorization()
                     let whenToTakeTime = dateHelper.getWhenToTakeTimeInverval(from: time)
                     if let originalPill = originalPill {
                         PillsDataManager.shared.editPill(pill: originalPill, name: name, dosage: dosage, unit: unit, whenToTake: whenToTakeTime, frequencies: Array(frequencies))
@@ -133,6 +134,7 @@ struct PillDetailView: View {
                     isDataSaved = true
                     resetInputs()
                     onComplete()
+
                 }
                 .frame(maxWidth: .infinity)
                 if let originalPill = originalPill {

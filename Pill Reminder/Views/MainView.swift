@@ -37,6 +37,9 @@ struct MainView: View {
                 TabView(selectedTab: $selectedTab)
             }
         }
+        .onAppear{
+            UNUserNotificationCenter.current().setBadgeCount(0)
+        }
     }
 }
 

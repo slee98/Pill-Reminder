@@ -12,8 +12,7 @@ struct PillInfoCardListView: View {
     @State private var selectedPill: Pill?
     let gridColumns = [GridItem(.fixed(100),spacing: 80),GridItem(.fixed(100),spacing: 80)]
     @State private var isSheetPresented = false // Create a state variable to control the sheet presentation
-    @FetchRequest(entity: Pill.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \Pill.startDate, ascending: false)]) var pills: FetchedResults<Pill>
+
     let dateViewModel: DateHelper = DateHelper()
     
     
@@ -22,7 +21,7 @@ struct PillInfoCardListView: View {
             
             LazyVGrid(columns: gridColumns) {
                 
-                ForEach(pills) { pill in
+                ForEach(PillsDataManager.shared.fetchPills()) { pill in
                     
                     Button(action: {
                         selectedPill = pill
