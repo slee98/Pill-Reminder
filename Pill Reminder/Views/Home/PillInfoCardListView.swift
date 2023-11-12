@@ -12,7 +12,7 @@ struct PillInfoCardListView: View {
     @State private var selectedPill: Pill?
     let gridColumns = [GridItem(.fixed(100),spacing: 80),GridItem(.fixed(100),spacing: 80)]
     @State private var isSheetPresented = false // Create a state variable to control the sheet presentation
-
+    
     let dateViewModel: DateHelper = DateHelper()
     
     
@@ -47,7 +47,7 @@ struct PillInfoCardListView: View {
                                     .font(.system(size: 12))
                                 
                                 //Text(pill.whenToTakeFrequencies)
-                                    //.font(.system(size: 12))
+                                //.font(.system(size: 12))
                                 
                             }
                         }
@@ -65,10 +65,9 @@ struct PillInfoCardListView: View {
         
     }
     
-    // Format an array of Date values into a readable string
     private func formatDates(_ dates: [Date]) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE" // Customize the date format as needed
+        dateFormatter.dateFormat = "EEEE" 
         
         let formattedDates = dates.map { dateFormatter.string(from: $0) }
         return formattedDates.joined(separator: ", ")

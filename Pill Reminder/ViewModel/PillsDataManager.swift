@@ -106,7 +106,7 @@ class PillsDataManager: ObservableObject {
         if let frequencies = pill.whenToTakeFrequencies?.compactMap({ Weekday(rawValue: $0) }), !frequencies.isEmpty {
             for dayOfWeek in frequencies {
                 dateComponents.weekday = dayOfWeek.weekdayValue
-                NotificationManager.shared.registerNotification(withTitle: title, 
+                NotificationManager.shared.registerNotification(withTitle: title,
                                                                 for: dateComponents,
                                                                 identifier: pill.id.map { $0.uuidString + dayOfWeek.rawValue },
                                                                 repeat: true)

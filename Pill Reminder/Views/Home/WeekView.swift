@@ -18,7 +18,7 @@ struct WeekView: View {
                     ZStack {
                         Circle()
                             .fill(Calendar.current.isDate(dateViewModel.currentDay, inSameDayAs: date)
-                                   ? Color.blue.opacity(0.5) : Color.white)
+                                  ? Color.blue.opacity(0.5) : Color.white)
                             .frame(width: 42, height: 42)
                         VStack {
                             Text(dateViewModel.getDayOfWeek(for: date))

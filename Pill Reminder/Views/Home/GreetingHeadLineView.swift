@@ -10,24 +10,21 @@ import SwiftUI
 struct GreetingHeadLineView: View {
     
     let dateViewModel = DateHelper()
-
+    
     var body: some View {
+        
         VStack(alignment: .leading) {
             Text("Pill Reminder")
                 .foregroundColor(.white)
                 .bold()
                 .padding(.leading, 100)
             
-            Image(systemName: "bell.fill")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding(.leading, 320)
-            
             Text("Good \(dateViewModel.getGreetingHeadLine())")
                 .bold()
                 .font(.system(size: 30))
                 .padding(.leading, 7)
-            
+                .padding(.top)
+
             Text("We will remind you of the mecidines you need to take today")
                 .font(.system(size: 14))
                 .padding(.leading, 7)

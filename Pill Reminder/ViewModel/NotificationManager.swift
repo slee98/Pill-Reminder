@@ -23,7 +23,7 @@ class NotificationManager {
         }
     }
     
-    func registerNotification(withTitle title: String, 
+    func registerNotification(withTitle title: String,
                               for dateComponents: DateComponents,
                               identifier: String?,
                               repeat: Bool) {

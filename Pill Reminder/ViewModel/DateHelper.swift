@@ -12,7 +12,6 @@ class DateHelper {
     var currentWeek: [Date] = []
     let currentDay: Date = Date()
     
-    // Intialize the DataViewModel and fetch the current week
     init() {
         populateCurrentWeek()
     }
@@ -38,7 +37,6 @@ class DateHelper {
         return formatter.string(from: date)
     }
     
-    // Format a date to a time string using the provided format
     func getTime(for date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
@@ -58,7 +56,6 @@ class DateHelper {
         return date.timeIntervalSince(beginningOfDay())
     }
     
-    // Determine the time category (Morning, Afternoon, Evening) for a given date
     func getGreetingHeadLine() -> String {
         let hour = Calendar.current.component(.hour, from: Date())
         

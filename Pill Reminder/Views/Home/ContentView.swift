@@ -24,6 +24,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             GreetingHeadLineView()
+                .padding(.top)
             Text(Date().formatted(date: .complete, time: .omitted))
                 .bold()
                 .textScale(.secondary)

@@ -134,7 +134,7 @@ struct PillDetailView: View {
                     isDataSaved = true
                     resetInputs()
                     onComplete()
-
+                    
                 }
                 .frame(maxWidth: .infinity)
                 if let originalPill = originalPill {
