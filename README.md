@@ -27,4 +27,4 @@ The Pill Reminder App tackles these critical issues.
   
 ---
 
-This project showcases my iOS development skills and demonstrates my ability to create user-friendly and visually appealing applications. The app offers a seamless shopping experience with intuitive navigation and a range of features designed to enhance user satisfaction.
+This project showcases my iOS development skills and demonstrates my ability to create user-friendly and visually appealing applications. 
